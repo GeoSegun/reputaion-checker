@@ -1,2 +1,6 @@
-streamlit
+pandas==1.5.3
+streamlit==1.25.0
+python-docx==0.8.11
+openpyxl
+xlsxwriter
 request
