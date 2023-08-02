@@ -3,4 +3,4 @@ streamlit==1.25.0
 python-docx==0.8.11
 openpyxl
 xlsxwriter
-request
+requests
