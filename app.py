@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-VT_API_KEY = ''  # Replace with your actual VirusTotal API key
+VT_API_KEY = '099466529d16f11466dce0ba24a3448a2dc2a39292e42207c0ed4dd6b045dbf3'  # Replace with your actual VirusTotal API key
 
 def check_malicious_url(url):
     url = f'https://www.virustotal.com/api/v3/domains/{url}'
