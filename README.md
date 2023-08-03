@@ -27,7 +27,7 @@ pip install -r requirements.txt
 4. Obtain a VirusTotal API Key:
 - Sign up for a VirusTotal account if you don't have one.
 - Create a new API key in your account settings.
-- Replace 'YOUR_VT_API_KEY' in app.py with your actual API key.
+- paste 'YOUR_VT_API_KEY' in webapp side-bar with your actual API key.
 5. Run the streamlit App:
  ```bash
 streamlit run app.py
