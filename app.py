@@ -1,7 +1,7 @@
 import streamlit as st
 import requests
 
-VT_API_KEY = '099466529d16f11466dce0ba24a3448a2dc2a39292e42207c0ed4dd6b045dbf3'  # Replace with your actual VirusTotal API key
+VT_API_KEY = 'YOUR_VT_API_KEY'  # Replace with your actual VirusTotal API key
 
 def check_malicious_url(url):
     url = f'https://www.virustotal.com/api/v3/domains/{url}'
@@ -27,7 +27,9 @@ def main_url():
                     if 'data' in result and 'attributes' in result['data']:
                         if result['data']['attributes']['last_analysis_stats']['malicious'] > 0:
                             malicious_urls.append(url)
-            st.text('\n'.join(malicious_urls))
+                            st.error(f'The URL {url} is malicious.')
+                        else:
+                            st.success(f'The URL {url} is clean.')
 
 def check_ip_malicious(ip):
     url = f'https://www.virustotal.com/api/v3/ip_addresses/{ip}'
@@ -53,7 +55,9 @@ def main_ip():
                     if 'data' in result and 'attributes' in result['data']:
                         if result['data']['attributes']['last_analysis_stats']['malicious'] > 0:
                             malicious_ips.append(ip)
-            st.text('\n'.join(malicious_ips))
+                            st.error(f'The IP {ip} is malicious.')
+                        else:
+                            st.success(f'The IP {ip} is clean.')
 
 if __name__ == '__main__':
     main_url()
