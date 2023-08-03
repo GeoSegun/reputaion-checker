@@ -35,6 +35,10 @@ streamlit run app.py
 ## Technologies Used
 - Streamlit: Python library for creating web applications with minimal effort.
 - VirusTotal API: Used to retrieve reputation information for IPs and domains.
-- 
+
 ## Acknowledgments
 This project was created as part of reducing the task of checking multiple IPs and Domains 
+
+## Deploy:
+I have deployed the app using a share.streamlit.io, to access the web app directly. Kindly visit:
+[My App](https://vtreputationchecker.streamlit.app/)
