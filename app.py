@@ -25,6 +25,7 @@ def main_url(api_key):
                     if 'data' in result and 'attributes' in result['data']:
                         if result['data']['attributes']['last_analysis_stats']['malicious'] > 0:
                             malicious_urls.append(url)
+                        
                             st.error(f'The URL {url} is malicious.')
                         else:
                             st.success(f'The URL {url} is clean.')
@@ -53,9 +54,10 @@ def main_ip(api_key):
                     if 'data' in result and 'attributes' in result['data']:
                         if result['data']['attributes']['last_analysis_stats']['malicious'] > 0:
                             malicious_ips.append(ip)
-                            st.error(f'The IP {ip} is malicious.')
-                        else:
-                            st.success(f'The IP {ip} is clean.')
+                            st.write(ip)
+                            # st.error(f'The IP {ip} is malicious.')
+                        # else:
+                        #     st.success(f'The IP {ip} is clean.')
 
 def main():
     st.sidebar.title('VirusTotal API Key')
